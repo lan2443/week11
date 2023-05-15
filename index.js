@@ -26,17 +26,38 @@ function changeColor() {
     }
 }
 
+
 var item2 = document.getElementById("item2");
-var color = false ;
 
-item2.addEventListener("mouseover", changeColor2);
+item2.addEventListener("mouseover", hovered, false);
+item2.addEventListener("mouseout", hoveredOut, false);
 
-function changeColor2() {
-    if (color == false) {
-        item2.style.backgroundColor = "green";
-        color = true;
-    } else {
-        item2.style.backgroundColor = "blue";
-        color = false;
-    }
+function hovered(e) {
+    item2.style.backgroundColor = "green";
+    console.log("hovered");
 }
+
+function hoveredOut(e) {
+    item2.style.backgroundColor = "blue";
+    console.log("hoveredout");
+}
+
+
+// var item2 = document.getElementById("item2");
+// var color2 = false ;
+
+// item2.addEventListener("focus", changeGreen);
+
+// function changeGreen() {
+//     if (color2 == false) {
+//         item2.style.backgroundColor = "green";
+//     }
+// }
+
+// item2.addEventListener("mouseout", changeBlue);
+
+// function changeBlue() {
+//     if () {
+//         item2.style.backgroundColor = "blue";
+//     }
+// }
